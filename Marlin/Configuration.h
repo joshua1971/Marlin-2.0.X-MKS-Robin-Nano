@@ -59,8 +59,8 @@
 //===========================================================================
 
 // Core XY
-//#define SAPPHIRE_PRO
-#define SAPPHIRE_PLUS
+#define SAPPHIRE_PRO
+//#define SAPPHIRE_PLUS
 
 // Cartesian
 //#define BLUER
@@ -123,10 +123,10 @@
 //          TMC5130, TMC5130_STANDALONE, TMC5160, TMC5160_STANDALONE
 //#define CUSTOM_STEPPER_DRIVERS
 #if ENABLED(CUSTOM_STEPPER_DRIVERS)
-  #define DRIVER_X TMC2209_STANDALONE
-  #define DRIVER_Y TMC2209_STANDALONE
-  #define DRIVER_Z TMC2209_STANDALONE
-  #define DRIVER_E0 TMC2209_STANDALONE
+  #define DRIVER_X TMC2208_STANDALONE
+  #define DRIVER_Y TMC2208_STANDALONE
+  #define DRIVER_Z TMC2208_STANDALONE
+  #define DRIVER_E0 TMC2208_STANDALONE
   //#define DRIVER_E1 TMC2209_STANDALONE
   //#define DRIVER_Z2 TMC2209_STANDALONE
 
@@ -149,9 +149,9 @@
 // If you have a different size of a print bed, enter it here
 //#define CUSTOM_BED_SIZE
 #if ENABLED(CUSTOM_BED_SIZE)
-  #define X_BED_SIZE_CUSTOM 200
-  #define Y_BED_SIZE_CUSTOM 200
-  #define Z_BED_SIZE_CUSTOM 200
+  #define X_BED_SIZE_CUSTOM 225
+  #define Y_BED_SIZE_CUSTOM 225
+  #define Z_BED_SIZE_CUSTOM 220
 #endif
 
 // Custom PID & TEMP SENSOR Settings  
@@ -191,7 +191,7 @@
  * :{ 'en':'English', 'an':'Aragonese', 'bg':'Bulgarian', 'ca':'Catalan', 'cz':'Czech', 'da':'Danish', 'de':'German', 'el':'Greek', 'el_gr':'Greek (Greece)', 'es':'Spanish', 'eu':'Basque-Euskera', 'fi':'Finnish', 'fr':'French', 'gl':'Galician', 'hr':'Croatian', 'hu':'Hungarian', 'it':'Italian', 'jp_kana':'Japanese', 'ko_KR':'Korean (South Korea)', 'nl':'Dutch', 'pl':'Polish', 'pt':'Portuguese', 'pt_br':'Portuguese (Brazilian)', 'ru':'Russian', 'sk':'Slovak', 'tr':'Turkish', 'uk':'Ukrainian', 'vi':'Vietnamese', 'zh_CN':'Chinese (Simplified)', 'zh_TW':'Chinese (Traditional)', 'test':'TEST' }
  */
 
-#define LCD_LANGUAGE en
+#define LCD_LANGUAGE de
 //#define RU_EXTENSION // Only activate with Russian language | Активировать только с русским языком
 
 
@@ -1019,9 +1019,9 @@
     //Sapphire Pro
     #define X_DRIVER_TYPE  TMC2208_STANDALONE
     #define Y_DRIVER_TYPE  TMC2208_STANDALONE
-    #define Z_DRIVER_TYPE  A4988
+    #define Z_DRIVER_TYPE  TMC2208_STANDALONE
     //#define Z2_DRIVER_TYPE A4988
-    #define E0_DRIVER_TYPE A4988
+    #define E0_DRIVER_TYPE TMC2208_STANDALONE
     //#define E1_DRIVER_TYPE A4988
   #elif ENABLED(SAPPHIRE_PLUS) && NONE(CUSTOM_STEPPER_DRIVERS)
     //Sapphire Plus
