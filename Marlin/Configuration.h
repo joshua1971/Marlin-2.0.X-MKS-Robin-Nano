@@ -121,7 +121,7 @@
 //          TMC2208, TMC2208_STANDALONE, TMC2209, TMC2209_STANDALONE,
 //          TMC26X,  TMC26X_STANDALONE,  TMC2660, TMC2660_STANDALONE,
 //          TMC5130, TMC5130_STANDALONE, TMC5160, TMC5160_STANDALONE
-//#define CUSTOM_STEPPER_DRIVERS
+#define CUSTOM_STEPPER_DRIVERS
 #if ENABLED(CUSTOM_STEPPER_DRIVERS)
   #define DRIVER_X TMC2208_STANDALONE
   #define DRIVER_Y TMC2208_STANDALONE
@@ -149,9 +149,9 @@
 // If you have a different size of a print bed, enter it here
 //#define CUSTOM_BED_SIZE
 #if ENABLED(CUSTOM_BED_SIZE)
-  #define X_BED_SIZE_CUSTOM 225
-  #define Y_BED_SIZE_CUSTOM 225
-  #define Z_BED_SIZE_CUSTOM 220
+  #define X_BED_SIZE_CUSTOM 200
+  #define Y_BED_SIZE_CUSTOM 200
+  #define Z_BED_SIZE_CUSTOM 200
 #endif
 
 // Custom PID & TEMP SENSOR Settings  
@@ -291,7 +291,7 @@
 // @section info
 
 // Author info of this build printed to the host during boot and M115
-#define STRING_CONFIG_H_AUTHOR "(le3tspeak, MKS Robin Nano)" // Who made the changes.
+#define STRING_CONFIG_H_AUTHOR "(TDL, MKS Robin Nano)" // Who made the changes.
 #define CUSTOM_VERSION_FILE Version.h // Path from the root directory (no quotes)
 
 /**
@@ -1019,9 +1019,9 @@
     //Sapphire Pro
     #define X_DRIVER_TYPE  TMC2208_STANDALONE
     #define Y_DRIVER_TYPE  TMC2208_STANDALONE
-    #define Z_DRIVER_TYPE  TMC2208_STANDALONE
+    #define Z_DRIVER_TYPE  A4988
     //#define Z2_DRIVER_TYPE A4988
-    #define E0_DRIVER_TYPE TMC2208_STANDALONE
+    #define E0_DRIVER_TYPE A4988
     //#define E1_DRIVER_TYPE A4988
   #elif ENABLED(SAPPHIRE_PLUS) && NONE(CUSTOM_STEPPER_DRIVERS)
     //Sapphire Plus
@@ -1559,8 +1559,8 @@
 // :{ 0:'Low', 1:'High' }
 #define X_ENABLE_ON 0
 #define Y_ENABLE_ON 0
-#define Z_ENABLE_ON 1
-#define E_ENABLE_ON 1 // For all extruders
+#define Z_ENABLE_ON 0
+#define E_ENABLE_ON 0 // For all extruders
 
 // Disables axis stepper immediately when it's not being used.
 // WARNING: When motors turn off there is a chance of losing position accuracy!
@@ -1770,7 +1770,7 @@
       #define Z_MIN_POS 0
       #define X_MAX_POS X_BED_SIZE
       #define Y_MAX_POS Y_BED_SIZE
-      #define Z_MAX_POS 230
+      #define Z_MAX_POS 220
     #endif
   #elif ENABLED(SAPPHIRE_PLUS)
     //Sapphire Plus
